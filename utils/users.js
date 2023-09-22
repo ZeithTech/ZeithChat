@@ -1,12 +1,18 @@
-const blacklist = ["Fuywkinn"];
+const whitelist = ["Fuywkinn","Sismalanka"];
 const users = [];
 
 // Join user to chat
 function userJoin(id, username, room) {
-  const user = { id, username, room };
-      users.push(user);
-  
-  return user;
+  for (let name of whitelist ) {
+    if (name === username) {
+      const user = { id, username, room };
+        users.push(user);
+      return user;
+    }
+    else{
+      console.log("User not whitelisted");
+    }
+  }
 }
 
 // Get current user
