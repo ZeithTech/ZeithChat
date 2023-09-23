@@ -1,16 +1,19 @@
-const whitelist = ["Fuywkinn","Sismalanka","Clexlia","Samomen","ElPatrons","notdoxed"];
+const whitelist = ["Fuywkinn","Sismalanka","Clexlia","Samomen","ElPatrons","Apo"];
+const password = ["asd31"]
 const users = [];
 
 // Join user to chat
-function userJoin(id, username, room) {
+function userJoin(id, username,room) {
   for (let name of whitelist ) {
-    if (name === username) {
-      const user = { id, username, room };
-        users.push(user);
-      return user;
-    }
-    else{
-      console.log("User not whitelisted");
+    for(let pass of password){
+      if (name === username && pass === password) {
+        const user = { id, username, room };
+          users.push(user);
+        return user;
+      }
+      else{
+        console.log("User not whitelisted");
+      }
     }
   }
 }
