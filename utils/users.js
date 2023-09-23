@@ -1,4 +1,4 @@
-const whitelist = ["Fuywkinn","Sismalanka"];
+const whitelist = ["Fuywkinn","Sismalanka","Clexlia","Samomen","ElPatrons","notdoxed"];
 const users = [];
 
 // Join user to chat
